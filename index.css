@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+
+body {
+	background: #eee;
+	font-size: 1.6rem;
+}
+
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.game {
+	max-width: 40%;
+	margin: 8rem auto 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.block {
+	border: 1px solid #546555;
+	padding: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.circle {
+	border: 4px solid black;
+	position: absolute;
+	border-radius: 50%;
+	height: 4rem;
+	width: 4rem;
+}
+
+.circle:hover {
+	cursor: pointer;
+}
+
+.close {
+	cursor: pointer; 
+	top: 48%; 
+	left: 30%; 
+	position: absolute;
+}
+
+.close:before, 
+.close:after {
+	content: ""; 
+	position: absolute; 
+	width: 48px; 
+	height: 8px; 
+	background: black;
+}
+
+.close:before {
+	transform: rotate(45deg);
+}
+
+.close:after {
+	transform: rotate(-45deg);
+}
